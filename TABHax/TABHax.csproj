@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{639D47E1-CB48-4A3E-9040-FE86846963B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TABHax</RootNamespace>
+    <AssemblyName>TABHax</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TotallyAccurateBattlegrounds\TotallyAccurateBattlegrounds_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TotallyAccurateBattlegrounds\TotallyAccurateBattlegrounds_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonFx, Version=2.0.1209.2802, Culture=neutral, PublicKeyToken=315052dd637f8a52, processorArchitecture=MSIL">
+      <HintPath>..\packages\JsonFx.2.0.1209.2802\lib\net35\JsonFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D, Version=4.1.1.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TotallyAccurateBattlegrounds\TotallyAccurateBattlegrounds_Data\Managed\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>bin\Debug\Managed 2018-06-11\Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>bin\Debug\Managed 2018-06-11\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dumping\DComponent.cs" />
+    <Compile Include="Dumping\DGameObject.cs" />
+    <Compile Include="Dumping\DQuaternion.cs" />
+    <Compile Include="Dumping\DTransform.cs" />
+    <Compile Include="Dumping\DVector3.cs" />
+    <Compile Include="Dumping\KeyValue.cs" />
+    <Compile Include="Game\GunManager.cs" />
+    <Compile Include="Game\PhotonServerExtensions.cs" />
+    <Compile Include="Game\ShaderManager.cs" />
+    <Compile Include="Scripts\Lighter.cs" />
+    <Compile Include="UI\ESP.cs" />
+    <Compile Include="Game\PlayerExtensions.cs" />
+    <Compile Include="Game\PlayerManager.cs" />
+    <Compile Include="Harmony\Attributes.cs" />
+    <Compile Include="Harmony\CodeInstruction.cs" />
+    <Compile Include="Harmony\CodeTranspiler.cs" />
+    <Compile Include="Harmony\Extras\DelegateTypeFactory.cs" />
+    <Compile Include="Harmony\Extras\FastAccess.cs" />
+    <Compile Include="Harmony\Extras\MethodInvoker.cs" />
+    <Compile Include="Harmony\GlobalSuppressions.cs" />
+    <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\HarmonyMethod.cs" />
+    <Compile Include="Harmony\HarmonySharedState.cs" />
+    <Compile Include="Harmony\ILCopying\ByteBuffer.cs" />
+    <Compile Include="Harmony\ILCopying\Emitter.cs" />
+    <Compile Include="Harmony\ILCopying\ILInstruction.cs" />
+    <Compile Include="Harmony\ILCopying\Memory.cs" />
+    <Compile Include="Harmony\ILCopying\MethodCopier.cs" />
+    <Compile Include="Harmony\ILCopying\Signature.cs" />
+    <Compile Include="Harmony\MethodPatcher.cs" />
+    <Compile Include="Harmony\Patch.cs" />
+    <Compile Include="Harmony\PatchFunctions.cs" />
+    <Compile Include="Harmony\PatchProcessor.cs" />
+    <Compile Include="Harmony\Priority.cs" />
+    <Compile Include="Harmony\Properties\AssemblyInfo.cs" />
+    <Compile Include="Harmony\Tools\AccessCache.cs" />
+    <Compile Include="Harmony\Tools\AccessTools.cs" />
+    <Compile Include="Harmony\Tools\DynamicTools.cs" />
+    <Compile Include="Harmony\Tools\Extensions.cs" />
+    <Compile Include="Harmony\Tools\FileLog.cs" />
+    <Compile Include="Harmony\Tools\PatchTools.cs" />
+    <Compile Include="Harmony\Tools\SelfPatching.cs" />
+    <Compile Include="Harmony\Tools\SymbolExtensions.cs" />
+    <Compile Include="Harmony\Tools\Traverse.cs" />
+    <Compile Include="Harmony\Transpilers.cs" />
+    <Compile Include="Hax.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Patches\AttackPatch.cs" />
+    <Compile Include="Patches\GodPatch.cs" />
+    <Compile Include="Patches\NoRecoil.cs" />
+    <Compile Include="Patches\NoShake.cs" />
+    <Compile Include="Patches\NoShake2.cs" />
+    <Compile Include="Patches\NoShake3.cs" />
+    <Compile Include="Patches\NoStun.cs" />
+    <Compile Include="Patches\Patch.cs" />
+    <Compile Include="Patches\ShootPatch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dumping\SceneDumper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReflectionExtensions.cs" />
+    <Compile Include="SteamHandler.cs" />
+    <Compile Include="UI\TABUI.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="Game\PickupHelper.cs" />
+    <Compile Include="UI\Controls\Button.cs" />
+    <Compile Include="UI\Controls\Control.cs" />
+    <Compile Include="UI\Controls\FlowLayout.cs" />
+    <Compile Include="UI\Controls\Label.cs" />
+    <Compile Include="UI\Controls\Layout.cs" />
+    <Compile Include="UI\Controls\LinearLayout.cs" />
+    <Compile Include="UI\Controls\ScrollPanel.cs" />
+    <Compile Include="UI\Controls\Window.cs" />
+    <Compile Include="Utils\RandomWrapper.cs" />
+    <Compile Include="UI\ZatsRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Harmony\Harmony.csproj" />
+    <None Include="Resources\FinalFinalMap.bin" />
+    <None Include="Resources\FinalFinalMap.png" />
+    <None Include="Resources\FinalFinalMap_Clipped.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Harmony\Harmony.nuspec" />
+    <None Include="Harmony\Properties\launchSettings.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
