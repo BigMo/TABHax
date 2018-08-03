@@ -164,7 +164,7 @@ namespace TABHax
 
         public void MovePlayer(Vector3 position)
         {
-            Rigidbody[] allRigs = Player.localPlayer.GetComponent<RigidbodyHolder>().AEGMKLJJLLA().ToArray();
+            Rigidbody[] allRigs = Player.localPlayer.GetComponent<RigidbodyHolder>().CPKBOPKDLEB().ToArray();
             for (int i = 0; i < allRigs.Length; i++)
                 allRigs[i].gameObject.transform.position = position;
 
@@ -172,7 +172,7 @@ namespace TABHax
             {
                 var transform = Player.localPlayer.m_playerCamera.gameObject.transform;
                 Vector2 rotation = new Vector2(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y);
-                server.SendPlayerUpdate(transform.position, rotation, Player.localPlayer.m_playerCamera.gameObject.transform.forward, 1);
+                server.SendPlayerUpdate(transform.position, rotation, Player.localPlayer.m_playerCamera.gameObject.transform.forward, 1, true);
             }
         }
 
@@ -213,14 +213,14 @@ namespace TABHax
             {
                 var transform = Player.localPlayer.m_playerCamera.gameObject.transform;
                 Vector2 rotation = new Vector2(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y);
-                server.SendPlayerUpdate(fakeNewPos.position, rotation, fakeNewPos.forward, 1);
+                server.SendPlayerUpdate(fakeNewPos.position, rotation, fakeNewPos.forward, 1, true);
             }
             Player.localPlayer.m_interactionHandler.PickUp(pickup, false, pickup.equipSlots, 1);
             if (server)
             {
                 var transform = Player.localPlayer.m_playerCamera.gameObject.transform;
                 Vector2 rotation = new Vector2(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y);
-                server.SendPlayerUpdate(oldPos.position, rotation, oldPos.forward, 1);
+                server.SendPlayerUpdate(oldPos.position, rotation, oldPos.forward, 1, true);
             }
         }
 
@@ -343,7 +343,7 @@ namespace TABHax
                 GunManager.AimAt(GunManager.RightGun, nearest);
             }
 
-            var allRigs = Player.localPlayer.GetComponent<RigidbodyHolder>().ECGEEPIPDHL().ToArray();
+            var allRigs = Player.localPlayer.GetComponent<RigidbodyHolder>().CPKBOPKDLEB().ToArray();
             var colliders = Player.localPlayer.GetComponentsInChildren<Collider>();
             foreach (var r in allRigs)
             {
@@ -428,7 +428,7 @@ namespace TABHax
                 server?.SendPlayerUpdate(marker.transform.position,
                     new Vector2(UnityEngine.Random.Range(-179, 179), UnityEngine.Random.Range(-179, 179)),
                     new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)),
-                    5);
+                    5, true);
             }
 
             PlayerManager.LocalPlayer.m_weaponHandler?.leftWeapon?.GetComponentInChildren<Railing>(true)?.gameObject.SetActive(true);
@@ -452,11 +452,11 @@ namespace TABHax
                     var oldPos = PlayerManager.LocalPlayer.m_torso.transform;
                     var rotation = new Vector2(PlayerManager.LocalPlayer.m_torso.transform.rotation.eulerAngles.x, PlayerManager.LocalPlayer.m_torso.transform.rotation.eulerAngles.y);
 
-                    server?.SendPlayerUpdate(p.transform.position, rotation, p.transform.forward, 1);
+                    server?.SendPlayerUpdate(p.transform.position, rotation, p.transform.forward, 1, true);
                     p.canInteract = true;
                     Player.localPlayer.m_interactionHandler.PickUp(p, false, p.equipSlots, 1);
 
-                    server?.SendPlayerUpdate(oldPos.position, rotation, oldPos.forward, 1);
+                    server?.SendPlayerUpdate(oldPos.position, rotation, oldPos.forward, 1, true);
                     autoPickupLast = Time.time;
                 }
             }
@@ -508,17 +508,6 @@ namespace TABHax
                 Console.WriteLine("{1} = 1 << {0},", i,
                     !string.IsNullOrEmpty(layer) ? layer : string.Format("__unknown{0}", unknownId++));
             }
-        }
-
-        private static void Test()
-        {
-            string t;
-            InTest(t);
-        }
-
-        private static void InTest(in string test)
-        {
-            Console.WriteLine("Argument: {0}", test);
         }
     }
 }
